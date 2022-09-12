@@ -17,7 +17,9 @@ var commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 //mongodb+srv://arun2000:bIJKXRjB2IdXSLHM@cluster0.0tvib.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 mongoose.connect(
-  "mongodb+srv://arun2000:bIJKXRjB2IdXSLHM@cluster0.0tvib.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+  "mongodb+srv://arun2000:bIJKXRjB2IdXSLHM@cluster0.0tvib.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+    useNewUrlParser : true
+  })
   .then((res)=> console.log("database connected...."))
   .catch((e)=>{console.log(e);});
 
